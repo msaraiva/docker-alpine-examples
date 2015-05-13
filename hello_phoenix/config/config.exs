@@ -11,6 +11,7 @@ config :hello_phoenix, HelloPhoenix.Endpoint,
   root: Path.dirname(__DIR__),
   secret_key_base: "0NQFmN33R+A4MtcLybBvxgpnl7bB0/mS3CZYcpvHcala+sPUCBz0n2y0r8622MNE",
   debug_errors: false,
+  server: true,
   pubsub: [name: HelloPhoenix.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
