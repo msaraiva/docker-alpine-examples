@@ -1,4 +1,4 @@
-FROM msaraiva/alpine-elixir
+FROM msaraiva/elixir
 MAINTAINER Marlus Saraiva <marlus.saraiva@gmail.com>
 
 RUN apk --update add bash vim git-bash-completion && \
