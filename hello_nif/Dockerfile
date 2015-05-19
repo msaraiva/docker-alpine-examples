@@ -1,9 +1,8 @@
-FROM msaraiva/elixir:1.0.4
+FROM msaraiva/erlang:17.5
 
-RUN apk update
+ADD hello_nif /app/hello_nif
+ADD priv/math.so /app/priv/math.so
 
-RUN apk add gcc make libc-dev libgcc
+WORKDIR /app
 
-ADD . /nif_test2
-
-CMD ["/bin/sh"]
+CMD ["/app/hello_nif"]
