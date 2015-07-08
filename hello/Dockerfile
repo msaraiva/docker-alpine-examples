@@ -1,4 +1,4 @@
-FROM msaraiva/erlang:18.0.1
+FROM msaraiva/alpine-elixir-base:18.0
 
 ADD hello /usr/local/bin/hello
 

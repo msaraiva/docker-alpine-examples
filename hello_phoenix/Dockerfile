@@ -1,4 +1,4 @@
-FROM msaraiva/erlang:18.0.1
+FROM msaraiva/alpine-elixir-base:18.0
 
 RUN apk --update add erlang-sasl && rm -rf /var/cache/apk/*
 
