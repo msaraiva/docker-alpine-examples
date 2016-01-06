@@ -11,13 +11,15 @@ config :hello_phoenix, HelloPhoenix.Endpoint,
   debug_errors: true,
   code_reloader: true,
   cache_static_lookup: false,
+  check_origin: false,
   watchers: []
 
 # Watch static and templates for browser reloading.
 config :hello_phoenix, HelloPhoenix.Endpoint,
   live_reload: [
     patterns: [
-      ~r{priv/static/.*(js|css|png|jpeg|jpg|gif)$},
+      ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
+      ~r{priv/gettext/.*(po)$},
       ~r{web/views/.*(ex)$},
       ~r{web/templates/.*(eex)$}
     ]
@@ -25,3 +27,8 @@ config :hello_phoenix, HelloPhoenix.Endpoint,
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
+
+# Set a higher stacktrace during development.
+# Do not configure such in production as keeping
+# and calculating stacktraces is usually expensive.
+config :phoenix, :stacktrace_depth, 20

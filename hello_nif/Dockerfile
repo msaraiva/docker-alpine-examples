@@ -1,4 +1,4 @@
-FROM msaraiva/alpine-elixir-base:18.0
+FROM msaraiva/erlang:18.1
 
 ADD hello_nif /app/hello_nif
 ADD priv/math.so /app/priv/math.so
