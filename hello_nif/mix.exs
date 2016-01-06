@@ -13,7 +13,7 @@ defmodule HelloNif.Mixfile do
   def project do
     [app: :hello_nif,
      version: "0.0.1",
-     elixir: "~> 1.0.4",
+     elixir: ">= 1.1.1",
      escript: [main_module: HelloNif],
      compilers: [:math, :elixir, :app],
      deps: deps]
